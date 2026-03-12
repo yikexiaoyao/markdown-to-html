@@ -1,52 +1,49 @@
-# Markdown to HTML Converter
+# Markdown 转 HTML 转换器
 
-A universal skill for converting Markdown files to HTML with GitHub Flavored Markdown support.
+一个通用的 OpenClaw 技能，用于将 Markdown 文件转换为 HTML，支持 GitHub 风格 Markdown。
 
-## Features
+## 功能特性
 
-- ✅ GitHub Flavored Markdown support
-- ✅ Table rendering
-- ✅ Code syntax highlighting
-- ✅ Auto-generated table of contents
-- ✅ Custom CSS support
-- ✅ Responsive design
+- ✅ GitHub 风格 Markdown 支持
+- ✅ 表格渲染
+- ✅ 代码语法高亮
+- ✅ 自动生成目录
+- ✅ 自定义 CSS 支持
+- ✅ 响应式设计
 
-## Installation
+## 安装
 
 ```bash
-# From skillhub
+# 从 skillhub 安装
 skillhub install markdown-to-html
 
-# Or clone manually
+# 或手动克隆
 git clone https://github.com/yikexiaoyao/markdown-to-html.git
 ```
 
-## Usage
+## 使用方法
 
-### Command Line
+### 命令行
 
 ```bash
-# Basic conversion
+# 基本转换
 python3 md2html.py input.md -o output.html
 
-# With custom CSS
+# 使用自定义 CSS
 python3 md2html.py input.md -o output.html --css style.css
-
-# Convert and preview
-python3 md2html.py input.md --open
 ```
 
-### As a Module
+### 作为模块使用
 
-```javascript
-import { convertMarkdown } from './src/convert.js';
+```python
+from md2html import convert_markdown
 
-const html = await convertMarkdown('# Hello World');
+html = convert_markdown('# 你好世界')
 ```
 
-## Configuration
+## 配置
 
-Create `config.json` to customize:
+创建 `config.json` 自定义配置：
 
 ```json
 {
@@ -57,6 +54,15 @@ Create `config.json` to customize:
 }
 ```
 
-## License
+## 依赖
 
-MIT
+- Python 3.6+
+- markdown 库
+
+## 许可证
+
+MIT License - 详见 [LICENSE](LICENSE) 文件
+
+## 作者
+
+OpenClaw Community
