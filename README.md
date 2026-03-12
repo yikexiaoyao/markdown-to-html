@@ -14,11 +14,9 @@
 ## 安装
 
 ```bash
-# 从 skillhub 安装
-skillhub install markdown-to-html
-
-# 或手动克隆
+# 手动克隆
 git clone https://github.com/yikexiaoyao/markdown-to-html.git
+cd markdown-to-html
 ```
 
 ## 使用方法
@@ -31,33 +29,41 @@ python3 md2html.py input.md -o output.html
 
 # 使用自定义 CSS
 python3 md2html.py input.md -o output.html --css style.css
+
+# 查看帮助
+python3 md2html.py --help
 ```
 
-### 作为模块使用
+### Python 调用
 
 ```python
-from md2html import convert_markdown
+import subprocess
 
-html = convert_markdown('# 你好世界')
-```
-
-## 配置
-
-创建 `config.json` 自定义配置：
-
-```json
-{
-  "defaultCss": true,
-  "highlightCode": true,
-  "generateToc": true,
-  "outputDir": "./output"
-}
+# 调用转换脚本
+subprocess.run([
+    'python3', 'md2html.py', 
+    'input.md', 
+    '-o', 'output.html'
+])
 ```
 
 ## 依赖
 
 - Python 3.6+
 - markdown 库
+
+安装依赖：
+```bash
+pip install markdown
+```
+
+## 输出示例
+
+转换后的 HTML 包含：
+- 响应式布局（最大宽度 900px）
+- GitHub 风格样式
+- 代码高亮
+- 表格样式
 
 ## 许可证
 
