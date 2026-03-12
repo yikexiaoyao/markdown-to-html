@@ -1,0 +1,17 @@
+{
+  "name": "markdown-to-html",
+  "version": "1.0.0",
+  "description": "Convert Markdown files to HTML with GitHub Flavored Markdown support",
+  "main": "md2html.py",
+  "scripts": {
+    "convert": "python3 md2html.py"
+  },
+  "keywords": ["markdown", "html", "converter", "openclaw", "skill"],
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "openclaw": {
+    "skill": true,
+    "version": ">=2026.3.0",
+    "permissions": ["read", "write"]
+  }
+}
